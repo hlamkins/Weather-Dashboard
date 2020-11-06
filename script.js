@@ -11,9 +11,13 @@ $("#submit").on("click", function(){
         dataType: "json"
 
     }).then(function(response) {
-        console.log(queryURL);
-        console.log(response);
-    
+       console.log(response);
+
+       $(".city").html("<h1>" + response.name)
+       let tempF = (response.main.temp - 273.15) * 1.8 + 32;
+
+       $(".temperature").text("Temperature: " + tempF.toFixed(1) + '\u00B0 F');
+      
     });
 }) 
 

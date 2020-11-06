@@ -16,31 +16,64 @@
     <title>Weather Dashboard</title>
 </head>
 
-<nav class="navbar navbar-light">
-    <a class="navbar-brand" href="#">Weather Dahsboard</a>
-  </nav>
-
- <div class="container">
-      <div class="row" id="search">
-            <div class="col-sm-2">
-                <p>Search for a City:</p>
-                <div class="row">
-                    <form class="example" action="action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-            </div>
-      </div>
-
- </div> 
-  
 
 <body>
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="#">Weather Dashboard</a>
+    </nav>
+
+ <div class="container">
+     <div class="row">
+            <div class="col-lg-2">
+                <p>Search for a City:</p>
+                <br>
+                <form class="example" action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>  
+                <br>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-10">
+                <div class="city"></div>
+                <div class="temperature"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
+                <div class="uvindex"></div>
+
+                <br>
+
+                <div class="fiveday"></div>
+            </div>
+        </div>
+
+
+
+    </div> 
+       
+
+            
+        
+        
+        
+      
+
+  
 
 
 
 
- <script src="script.js"></script>   
+
+
+ <script src="script.js"></script> 
+
 </body>
+
 </html>

@@ -43,5 +43,6 @@ form.example::after {
 	display: table;
 }
 
-.history {
+li {
+	list-style-type: none;
 }

@@ -34,15 +34,17 @@ $('#submit').on('click', function() {
 
         });
         
-        //let futureURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchInput '&appid=67027d10adc311be082d01770137fd84';
+        let futureURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchInput + '&appid=67027d10adc311be082d01770137fd84';
         
-        //.ajax({
-          //  url: futureURL,
-          //  method: 'Get',
-          //  dataType: 'json'
+        $.ajax({
+            url: futureURL,
+            method: 'Get',
+            dataType: 'json'
+        }).then(function(response) {
+            console.log(response);
 
 
-        //})
+        })
 
 
 		$('.city').html('<h1>' + response.name);

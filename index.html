@@ -23,7 +23,7 @@
     </nav>
 
  <div class="container">
-     <div class="row">
+     <div class="d-flex flex-row">
             <div class="col-lg-4">
                 <p>Search for a City:</p>
                 <br>
@@ -32,6 +32,7 @@
                     <button id="submit" type="button"><i class="fa fa-search"></i></button>
                 </form>  
                 <br>
+
                 <div class="card" style="width: 18rem height: max-content;">
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item" id="1"></li>
@@ -44,38 +45,42 @@
             </div>
             
             <div class="col-lg-8">
-                <div class="city"></div>
-                <div class="temperature"></div>
-                <div class="humidity"></div> 
-                <div class="wind"></div>
-                <div class="uvindex"></div>
-              
-             <div class="row">
-                <div class="card text-white bg-primary mb-3" style="max-width: 8rem;">
+                <div class="card" id="results" style="width: auto; height: 300px;">
+                    <div class="card-body">
+                        <p class="city"></p>
+                        <p class="temperature"></p>
+                        <p class="humidity"></p> 
+                        <p class="wind"></p>
+                        <p class="uvindex"></p>
+                    </div>    
+                </div>
+
+             <div class="d-flex flex-row">
+                <div class="card text-white bg-primary mb-5" style="width: auto;">
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3" style="max-width: 8rem;">
+                <div class="card text-white bg-primary mb-5" style="width: auto;">
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3" style="max-width: 8rem;">
+                <div class="card text-white bg-primary mb-5" style="width: auto;">
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3" style="max-width: 8rem;">
+                <div class="card text-white bg-primary mb-5" style="width: auto;">
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3" style="max-width: 8rem;">
+                <div class="card text-white bg-primary mb-5" style="width: auto;">
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

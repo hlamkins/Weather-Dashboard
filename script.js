@@ -32,7 +32,18 @@ $('#submit').on('click', function() {
             $('.uvindex').html('UV Index: ' + response.value);
              
 
-		});
+        });
+        
+        //let futureURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchInput '&appid=67027d10adc311be082d01770137fd84';
+        
+        //.ajax({
+          //  url: futureURL,
+          //  method: 'Get',
+          //  dataType: 'json'
+
+
+        //})
+
 
 		$('.city').html('<h1>' + response.name);
 

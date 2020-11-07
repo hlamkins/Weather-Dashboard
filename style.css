@@ -43,6 +43,6 @@ form.example::after {
 	display: table;
 }
 
-li {
-	list-style-type: none;
+.container {
+	margin-left: 10%;
 }

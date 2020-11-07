@@ -43,11 +43,12 @@ $('#submit').on('click', function() {
         }).then(function(response) {
             console.log(response);
 
+           //add code to log results to weather cards
 
         })
 
 
-		$('.city').html('<h1>' + response.name);
+		$('.city').html('<h1>' + response.name); //add current date to this and possible weather icon
 
 		let tempF = (response.main.temp - 273.15) * 1.8 + 32;
 		$('.temperature').text('Temperature: ' + tempF.toFixed(1) + '\u00B0 F');
@@ -61,4 +62,3 @@ $('#submit').on('click', function() {
 	});
 });
 
-//five day forecast api   = "https://api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}"

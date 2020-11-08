@@ -56,6 +56,37 @@ $('#submit').on('click', function() {
        	$('.temp1').text("Temperature: " + tempOne.toFixed(1) + '\u00B0 F');
 		$('.humid1').html("Humidity: " + response.daily[1].humidity + "%");
 
+		let tempTwo = (response.daily[2].feels_like.day - 273.156) * 1.8 + 32;	
+		let d2 = moment().add(2, 'day').format('l');
+			
+		$('#date2').html(d2);
+       	$('.temp2').text("Temperature: " + tempTwo.toFixed(1) + '\u00B0 F');
+		$('.humid2').html("Humidity: " + response.daily[2].humidity + "%");
+
+		let tempThree = (response.daily[3].feels_like.day - 273.156) * 1.8 + 32;	
+		let d3 = moment().add(3, 'day').format('l');
+			
+		$('#date3').html(d3);
+       	$('.temp3').text("Temperature: " + tempThree.toFixed(1) + '\u00B0 F');
+		$('.humid3').html("Humidity: " + response.daily[3].humidity + "%");
+
+		let tempFour = (response.daily[4].feels_like.day - 273.156) * 1.8 + 32;	
+		let d4 = moment().add(4, 'day').format('l');
+			
+		$('#date4').html(d4);
+       	$('.temp4').text("Temperature: " + tempFour.toFixed(1) + '\u00B0 F');
+		$('.humid4').html("Humidity: " + response.daily[4].humidity + "%");
+
+		let tempFive = (response.daily[5].feels_like.day - 273.156) * 1.8 + 32;	
+		let d5 = moment().add(5, 'day').format('l');
+			
+		$('#date5').html(d5);
+       	$('.temp5').text("Temperature: " + tempFive.toFixed(1) + '\u00B0 F');
+		$('.humid5').html("Humidity: " + response.daily[5].humidity + "%");
+
+
+
+
 
         })
 

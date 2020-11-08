@@ -97,7 +97,7 @@ $('#submit').on('click', function() {
 		
 		let date = moment().format('l');
 
-		$('.city').html('<h1>' + response.name + ' ' + '(' + date + ')  ' + ("<img src='https://openweathermap.org/img/wn/'" + response.weather[0].icon + "'10d@2x.png'>"));
+		$('.city').html('<h1>' + response.name + ' ' + '(' + date + ')  ' + "<img src='https://openweathermap.org/img/wn/'" + response.weather[0].icon + "'png'/>");
 		
 		let tempF = (response.main.temp - 273.15) * 1.8 + 32;
 		
@@ -116,6 +116,7 @@ $('#submit').on('click', function() {
 	localStorage.setItem("city", searchInput);
 
 	for (let i = 0; i < localStorage.length; i++) {
+		
 		
 		$("#localOutput").html(searchInput);
 	}

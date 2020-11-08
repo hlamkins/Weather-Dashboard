@@ -1,10 +1,10 @@
 
 
 $('#submit').on('click', function() {
-	console.log('click');
 	let searchInput = $('#search').val();
 
 	
+
 
 	let queryURL =
 		'https://api.openweathermap.org/data/2.5/weather?q=' + searchInput + '&appid=67027d10adc311be082d01770137fd84';
@@ -88,12 +88,16 @@ $('#submit').on('click', function() {
 
 
 
-        })
+        });
 
+		
+		
+
+	
 		
 		let date = moment().format('l');
 
-		$('.city').html('<h1>' + response.name + ' ' + '(' + date + ')'); 
+		$('.city').html('<h1>' + response.name + ' ' + '(' + date + ')  ' + ("<img src='https://openweathermap.org/img/wn/'" + response.weather[0].icon + "'10d@2x.png'>"));
 		
 		let tempF = (response.main.temp - 273.15) * 1.8 + 32;
 		
@@ -102,9 +106,21 @@ $('#submit').on('click', function() {
 		$('.humidity').html('Humidity: ' + response.main.humidity + '%');
 
         $('.wind').html('Wind Speed: ' + response.wind.speed + ' MPH');
-        
-
+		
+		
+	 
+	
 
 	});
+
+	localStorage.setItem("city", searchInput);
+
+	for (let i = 0; i < localStorage.length; i++) {
+		
+		$("#localOutput").html(searchInput);
+	}
+	
+
+	
 });
 

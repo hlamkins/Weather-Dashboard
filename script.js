@@ -20,7 +20,7 @@ $('#submit').on('click', function() {
 		let lon = response.coord.lon;
 
 		let uvURL =
-			'http://api.openweathermap.org/data/2.5/uvi?lat=' +
+			'https://api.openweathermap.org/data/2.5/uvi?lat=' +
 			lat +
 			'&lon=' +
 			lon +
@@ -51,8 +51,24 @@ $('#submit').on('click', function() {
 
 		let tempOne = (response.daily[1].feels_like.day - 273.156) * 1.8 + 32;	
 		let d = moment().add(1, 'day').format('l');
+
+		let weatherIcon1 = response.daily[1].weather[0].icon;
+		let iconURL1 = "https://openweathermap.org/img/wn/" + weatherIcon1 + ".png";
+
+		let weatherIcon2 = response.daily[2].weather[0].icon;
+		let iconURL2 = "https://openweathermap.org/img/wn/" + weatherIcon2 + ".png";
+
+		let weatherIcon3 = response.daily[3].weather[0].icon;
+		let iconURL3 = "https://openweathermap.org/img/wn/" + weatherIcon3 + ".png";
+
+		let weatherIcon4 = response.daily[4].weather[0].icon;
+		let iconURL4 = "https://openweathermap.org/img/wn/" + weatherIcon4 + ".png";
+
+		let weatherIcon5 = response.daily[5].weather[0].icon;
+		let iconURL5 = "https://openweathermap.org/img/wn/" + weatherIcon5 + ".png";
 			
 		$('#date1').html(d);
+		$('.icon1').html('<img src=' + iconURL1 + '>');
        	$('.temp1').text("Temperature: " + tempOne.toFixed(1) + '\u00B0 F');
 		$('.humid1').html("Humidity: " + response.daily[1].humidity + "%");
 
@@ -60,6 +76,7 @@ $('#submit').on('click', function() {
 		let d2 = moment().add(2, 'day').format('l');
 			
 		$('#date2').html(d2);
+		$('.icon2').html('<img src=' + iconURL2 + '>');
        	$('.temp2').text("Temperature: " + tempTwo.toFixed(1) + '\u00B0 F');
 		$('.humid2').html("Humidity: " + response.daily[2].humidity + "%");
 
@@ -67,6 +84,7 @@ $('#submit').on('click', function() {
 		let d3 = moment().add(3, 'day').format('l');
 			
 		$('#date3').html(d3);
+		$('.icon3').html('<img src=' + iconURL3 + '>');
        	$('.temp3').text("Temperature: " + tempThree.toFixed(1) + '\u00B0 F');
 		$('.humid3').html("Humidity: " + response.daily[3].humidity + "%");
 
@@ -74,6 +92,7 @@ $('#submit').on('click', function() {
 		let d4 = moment().add(4, 'day').format('l');
 			
 		$('#date4').html(d4);
+		$('.icon4').html('<img src=' + iconURL4 + '>');
        	$('.temp4').text("Temperature: " + tempFour.toFixed(1) + '\u00B0 F');
 		$('.humid4').html("Humidity: " + response.daily[4].humidity + "%");
 
@@ -81,6 +100,7 @@ $('#submit').on('click', function() {
 		let d5 = moment().add(5, 'day').format('l');
 			
 		$('#date5').html(d5);
+		$('.icon5').html('<img src=' + iconURL5 + '>');
        	$('.temp5').text("Temperature: " + tempFive.toFixed(1) + '\u00B0 F');
 		$('.humid5').html("Humidity: " + response.daily[5].humidity + "%");
 
@@ -97,7 +117,11 @@ $('#submit').on('click', function() {
 		
 		let date = moment().format('l');
 
-		$('.city').html('<h1>' + response.name + ' ' + '(' + date + ')  ' + "<img src='https://openweathermap.org/img/wn/'" + response.weather[0].icon + "'png'/>");
+		let weatherIcon = response.weather[0].icon;
+		let iconURL = "https://openweathermap.org/img/wn/" + weatherIcon + ".png";
+		
+		
+		$('.city').html('<h1>' + response.name + ' ' + '(' + date + ')  ' + '<img src=' + iconURL + '>');
 		
 		let tempF = (response.main.temp - 273.15) * 1.8 + 32;
 		
